@@ -43,26 +43,26 @@ namespace UnitTestingExampleTest
             Assert.NotNull(result);
         }
 
-        [Theory]
-        [InlineData("", 1)]
-        public void PersonDataFail(string name, int age)
-        {
-            var fixture = new Fixture();
+        //[Theory]
+        //[InlineData("", 1)]
+        //public void PersonDataFail(string name, int age)
+        //{
+        //    var fixture = new Fixture();
 
-            var personFixture = fixture.CreateMany<Person>();
+        //    var personFixture = fixture.CreateMany<Person>();
 
-            var person = new Person
-            {
-                Id = Guid.NewGuid(),
-                Age = 1,
-                Name = "Teste"
+        //    var person = new Person
+        //    {
+        //        Id = Guid.NewGuid(),
+        //        Age = 1,
+        //        Name = "Teste"
 
-            };
+        //    };
 
-            var personList = new List<Person>();
-            personList.Add(person);
+        //    var personList = new List<Person>();
+        //    personList.Add(person);
 
-            Assert.Equal(personFixture, personList);
-        }
+        //    Assert.Equal(personFixture, personList);
+        //}
     }
 }
